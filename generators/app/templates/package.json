@@ -4,7 +4,7 @@
 	"description": "AngularJS with Polymer Webcomponents basic skeleton for webapp development. With RequireJS, Bootstrap, Sass. Also with JSHint and Grunt.",
 	"license": "MIT",
 	"main": "app/index.js",
-	"repository": "zguillez/generator-base-angularjs",
+	"repository": "zguillez/generator-base-angulymerjs",
 	"author": {
 		"name": "Guillermo de la Iglesia",
 		"email": "mail@zguillez.io",
