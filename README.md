@@ -76,6 +76,7 @@ Develop code on folder **/src**
 /src
     /data
     /images
+    /modules
     /scripts
         /controllers
         /directives
@@ -105,11 +106,12 @@ Distribute code is compileded on forder **/dist**
     /images
     /js
     /lib
+    /modules
     /templates
 ```
 
 ## Routing
-Put the routes for your app into file **/script/routes.js**.
+Put the routes for your app into file **/script/router.js**.
 
 ```
 define(['controllers', 'directives'], function() {
@@ -129,7 +131,74 @@ define(['controllers', 'directives'], function() {
 });
 ```
 
-## Controllers
+# AngularJS directives vs Polymer elements
+
+You can use both AngularJS directives and Polymer elements.
+
+In the code example I use an AngularJS directive for Header section and a Polymer  element for the Footer section.
+
+* Put Polymer elements on folder **/modules/html/**
+* Put AngularJS directives on folder **/scripts/directives/**
+* Put AngularJS directives templates on folder **/templates/html/**
+
+## Polymer elements templating
+The NodeJS template engine JADE is implemented. Jade files (*.jade) must be located on **/modules** folder root.
+- Grunt task **jade.js** will process the files into HTML files to folder **/modules/html**.
+- Grunt task **copy.js** will copy all CSS files into **/modules/html** to folder **/dist/templates** for ditribution.
+
+* You can also create and edit HTML templates without Jade files in **/modules/html**.
+
+Example:
+
+	//modules/footer.jade
+	
+	dom-module(id='element-footer')
+		template
+			style.
+				:host {
+					font-size: 0.8em;
+				}
+	
+			div(class='row')
+				p @{{year}}
+	
+		script.
+			Polymer({
+				is: 'element-footer',
+				properties: {
+					year: String
+				}
+			});
+Rendered:
+
+	//modules/html/footer.html
+	
+	<dom-module id="element-footer">
+	    <template>
+	        <style>
+	        :host {
+	            font-size: 0.8em;
+	        }
+	        </style>
+	        <div class="row">
+	            <p>@{{year}}</p>
+	        </div>
+	    </template>
+	    <script>
+	    Polymer({
+	        is: 'element-footer',
+	        properties: {
+	            year: String
+	        }
+	    });
+	    </script>
+	</dom-module>
+
+
+**Documentation:**
+- [http://webcomponents.org/](http://webcomponents.org/)
+
+## AngularJS Controllers
 Controllers are loaded by RequireJS. Put all your neededed controllers into file **/scripts/controllers.js**.
 
 ```
@@ -159,7 +228,7 @@ define([], function() {
 });
 ```
 
-## Directives
+## AngularJS Directives
 Directives are loaded by RequireJS. Put all your neededed directives into file **/scripts/directives.js**.
 
 ```
@@ -191,13 +260,15 @@ define(['controllers/header', 'text!../../templates/header.html'], function(cont
 
 You can use RequireJS Text plugin to load a tempate file for the directive and inject a controller.
 
-### Templating
+### Directives templating
 The NodeJS template engine JADE is implemented. Jade files (*.jade) must be located on **/templates** folder root.
 - Grunt task **jade.js** will process the files into HTML files to folder **/templates/html**.
 - Grunt task **copy.js** will copy all CSS files into **/templates/html** to folder **/dist/templates** for ditribution.
 - You can also create and edit HTML templates files in **/templates/html**.
 
-You can use combined Jade and Angular directives for templating:
+## Integrating Polymer with AngularJS
+
+You can use Polymer elements into AngularJS templates:
 
 ```
 //templates/index.jade
@@ -206,13 +277,16 @@ header('ngheader'='')
 
 section(class='content')
 
-header
-    img(class='logo', src='images/angularjs.png')
+	header
+		img(class='logo', src='images/angularjs.png')
+		img(class='logo', src='images/polymer.png')
 
-.buttons.row
-    a('ng-repeat'='lib in data.libs', 'class'='btn btn-default btn-sm', 'href'='{{lib.url}}', 'target'='_black') {{lib.name}}
+	.buttons.row
+		link(rel='import' href='modules/libButton.html')
+		element-libButton('ng-repeat'='lib in data.libs', name='{{lib.name}}', url='{{lib.url}}')
 
-footer('ngfooter'='')
+link(rel='import' href='modules/footer.html')
+element-footer(year='2015')
 ```
 
 **Documentation:**
@@ -233,19 +307,15 @@ Contributors are welcome, please fork and send pull requests! If you have any id
 Original code licensed under [MIT](https://en.wikipedia.org/wiki/MIT_License) Open Source projects used within this project retain their original licenses.
 
 # Changelog
-## v0.1.7 (Decenber 21, 2015)
-- Grunt livereload
-
-## v0.1.5 (October 21, 2015)
-- Fixed jshint isuses
-
-## v0.1.0 (October 20, 2015)
-- Initial AngularJS skeleton
+## v0.1.0 (October 28, 2015)
+Initial AngularJS with Polymer skeleton
 
 Features:
-- Bootstrap
-- Jquery
-- Sass
-- Jade templating
-- JSHint code chech
-- Grunt tasks
+
+* Webcomponents
+* Bootstrap
+* Jquery
+* Sass
+* Jade templating
+* JSHint code chech
+* Grunt tasks
