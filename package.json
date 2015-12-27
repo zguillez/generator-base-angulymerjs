@@ -1,38 +1,38 @@
 {
-  "name": "generator-base-angulymerjs",
-  "version": "0.1.1",
-  "description": "AngularJS with Polymer Webcomponents basic skeleton for webapp development. With RequireJS, Bootstrap, Sass. Also with JSHint and Grunt.",
-  "license": "MIT",
-  "main": "app/index.js",
-  "repository": "zguillez/generator-base-angularjs",
-  "author": {
-    "name": "Guillermo de la Iglesia",
-    "email": "mail@zguillez.io",
-    "url": "https://github.com/zguillez"
-  },
-  "scripts": {
-    "test": "mocha"
-  },
-  "files": [
-    "generators"
-  ],
-  "keywords": [
-    "yeoman-generator",
-    "Angular",
-    "Polymer",
-    "webcomponents",
-    "Jade",
-    "Sass",
-    "Bootstrap",
-    "Jquery",
-    "Grunt"
-  ],
-  "dependencies": {
-    "yeoman-generator": "^0.22.2",
-    "chalk": "^1.1.1",
-    "yosay": "^1.1.0"
-  },
-  "devDependencies": {
-    "mocha": "*"
-  }
+	"name": "generator-base-angulymerjs",
+	"version": "0.1.1",
+	"description": "AngularJS with Polymer Webcomponents basic skeleton for webapp development. With RequireJS, Bootstrap, Sass. Also with JSHint and Grunt.",
+	"license": "MIT",
+	"main": "app/index.js",
+	"repository": "zguillez/generator-base-angulymerjs",
+	"author": {
+		"name": "Guillermo de la Iglesia",
+		"email": "mail@zguillez.io",
+		"url": "https://github.com/zguillez"
+	},
+	"scripts": {
+		"test": "mocha"
+	},
+	"files": [
+		"generators"
+	],
+	"keywords": [
+		"yeoman-generator",
+		"Angular",
+		"Polymer",
+		"webcomponents",
+		"Jade",
+		"Sass",
+		"Bootstrap",
+		"Jquery",
+		"Grunt"
+	],
+	"dependencies": {
+		"yeoman-generator": "^0.22.2",
+		"chalk": "^1.1.1",
+		"yosay": "^1.1.0"
+	},
+	"devDependencies": {
+		"mocha": "*"
+	}
 }
