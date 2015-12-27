@@ -1,7 +1,7 @@
 # generator-base-angulymerjs
 
 [![npm version](https://badge.fury.io/js/generator-base-angulymerjs.svg)](https://badge.fury.io/js/generator-base-angulymerjs)
-[![Build Status](http://img.shields.io/travis/zguillez/generator-base-angulymerjs.svg)](https://github.com/zguillez/generator-base-angulymerjs)
+[![Build Status](http://img.shields.io/travis/zguillez/generator-base-angulymerjs.svg)](https://travis-ci.org/zguillez/generator-base-angulymerjs)
 [![Code Climate](http://img.shields.io/codeclimate/github/zguillez/generator-base-angulymerjs.svg)](https://codeclimate.com/github/zguillez/generator-base-angulymerjs)
 [![Dependency Status](https://gemnasium.com/zguillez/generator-base-angulymerjs.svg)](https://gemnasium.com/zguillez/generator-base-angulymerjs)
 [![Installs](https://img.shields.io/npm/dt/generator-base-angulymerjs.svg)](https://coveralls.io/r/zguillez/generator-base-angulymerjs)
