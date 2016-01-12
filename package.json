@@ -1,6 +1,6 @@
 {
 	"name": "generator-base-angulymerjs",
-	"version": "1.0.0",
+	"version": "1.0.1",
 	"description": "AngularJS with Polymer Webcomponents basic skeleton for webapp development. With RequireJS, Bootstrap, Sass. Also with JSHint and Grunt.",
 	"license": "MIT",
 	"main": "app/index.js",
@@ -28,13 +28,13 @@
 		"Grunt"
 	],
 	"dependencies": {
-		"yeoman-generator": "^0.22.2",
+		"yeoman-generator": "^0.22.3",
 		"chalk": "^1.1.1",
 		"yosay": "^1.1.0"
 	},
 	"devDependencies": {
 		"mocha": "*",
-		"bower": "^1.7.1",
+		"bower": "^1.7.2",
 		"grunt": "^0.4.5",
 		"load-grunt-tasks": "^3.4.0",
 		"grunt-contrib-clean": "~0.7.0",
