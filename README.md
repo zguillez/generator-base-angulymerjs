@@ -1,5 +1,7 @@
 # generator-base-angulymerjs
 
+[![Join the chat at https://gitter.im/zguillez/generator-base-angulymerjs](https://badges.gitter.im/zguillez/generator-base-angulymerjs.svg)](https://gitter.im/zguillez/generator-base-angulymerjs?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+
 [![npm version](https://badge.fury.io/js/generator-base-angulymerjs.svg)](https://badge.fury.io/js/generator-base-angulymerjs)
 [![Build Status](http://img.shields.io/travis/zguillez/generator-base-angulymerjs.svg)](https://travis-ci.org/zguillez/generator-base-angulymerjs)
 [![Code Climate](http://img.shields.io/codeclimate/github/zguillez/generator-base-angulymerjs.svg)](https://codeclimate.com/github/zguillez/generator-base-angulymerjs)
