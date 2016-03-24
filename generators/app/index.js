@@ -8,7 +8,7 @@ module.exports = yeoman.generators.Base.extend({
 	},
 	prompting: function() {
 		var done = this.async();
-		this.log(yosay('Welcome to the zetadelic ' + chalk.red('AngularJS v' + this.pkg.version) + ' generator!'));
+		this.log(yosay('Welcome to the zetadelic ' + chalk.red('AngulymerJS v' + this.pkg.version) + ' generator!'));
 		var prompts = [];
 		this.prompt(prompts, function(props) {
 			this.props = props;
