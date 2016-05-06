@@ -12,13 +12,13 @@
 	},
 	"dependencies": {
 		"requirejs": "~2.2.0",
-		"requirejs-text": "~2.0.14",
-		"angular": "~1.5.3",
-		"angular-route": "~1.5.3",
+		"requirejs-text": "~2.0.15",
+		"angular": "~1.5.5",
+		"angular-route": "~1.5.5",
 		"polymer": "~1.4.0",
-		"webcomponentsjs": "^0.7.21",
+		"webcomponentsjs": "^0.7.22",
 		"jquery": "~2.2.3",
 		"bootstrap": "~3.3.6",
-		"lodash": "~4.9.0"
+		"lodash": "~4.11.2"
 	}
 }
